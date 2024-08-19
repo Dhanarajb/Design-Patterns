@@ -55,7 +55,7 @@ console.log(myCat.speak()); // Output: Meow!
 
 If you want to implement the Factory Pattern using functions in JavaScript, you can create a factory function instead of a class. This function takes parameters and returns the correct object based on the input.
 
-```
+```javascript
 function createDog() {
   return {
     type: 'dog',
