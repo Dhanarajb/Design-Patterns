@@ -28,3 +28,28 @@ const instance1 = singleton.getInstance();
 const instance2 = singleton.getInstance();
 console.log(instance1 === instance2); // true
 ```
+
+---
+
+### Class-Based Singleton
+
+This method uses a JavaScript class to manage the single instance. It uses a static property to ensure that only one instance is created.
+
+```
+class Singleton {
+  constructor() {
+    if (!Singleton.instance) {
+      Singleton.instance = this;
+      this.name = 'Rohit';
+      this.age = 91;
+      this.score = Math.floor(Math.random() * 10);
+    }
+    return Singleton.instance;
+  }
+}
+
+const instance1 = new Singleton();
+const instance2 = new Singleton();
+console.log(instance1 === instance2); // true
+```
+
