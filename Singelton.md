@@ -11,7 +11,7 @@ const singleton = (function () {
   let instance = null;
 
   function createInstance() {
-    return { name: 'Rohit', age: 91, score: Math.floor(Math.random() * 10) }; 
+    return { name: 'Dhanu', age: 27, score: Math.floor(Math.random() * 10) }; 
   }
 
   return {
@@ -40,8 +40,8 @@ class Singleton {
   constructor() {
     if (!Singleton.instance) {
       Singleton.instance = this;
-      this.name = 'Rohit';
-      this.age = 91;
+      this.name = 'Dhanu';
+      this.age = 27;
       this.score = Math.floor(Math.random() * 10);
     }
     return Singleton.instance;
