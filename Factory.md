@@ -50,3 +50,39 @@ const myCat = AnimalFactory.createAnimal('cat');
 console.log(myDog.speak()); // Output: Woof!
 console.log(myCat.speak()); // Output: Meow!
 ```
+---
+### Example: Function-Based Factory
+
+If you want to implement the Factory Pattern using functions in JavaScript, you can create a factory function instead of a class. This function takes parameters and returns the correct object based on the input.
+
+```
+function createDog() {
+  return {
+    type: 'dog',
+    speak: () => 'Woof!'
+  };
+}
+
+function createCat() {
+  return {
+    type: 'cat',
+    speak: () => 'Meow!'
+  };
+}
+
+function animalFactory(type) {
+  if (type === 'dog') {
+    return createDog();
+  } else if (type === 'cat') {
+    return createCat();
+  } else {
+    throw new Error('Unknown animal type');
+  }
+}
+
+const myDog = animalFactory('dog');
+console.log(myDog.speak()); // Output: Woof!
+
+const myCat = animalFactory('cat');
+console.log(myCat.speak()); // Output: Meow!
+```
